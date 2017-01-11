@@ -1,11 +1,11 @@
-CC  = gcc
+CC  = g++
 CXX = g++
 
 INCLUDES = -I../origin/
 
 FLAGS    = -Wall -pedantic -O2 $(INCLUDES)
 CFLAGS   = $(FLAGS)
-CXXFLAGS = $(FLAGS) -std=c++1z
+CXXFLAGS = $(FLAGS) -std=c++1z -fconcepts
 
 LDFLAGS = -lstdc++
 LDLIBS  =

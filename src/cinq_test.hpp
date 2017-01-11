@@ -8,7 +8,7 @@
 #include <deque>
 #include <functional>
 #include <initializer_list>
-
+#include <cmath>
 #include "cinq_enumerable.hpp"
 #include "all_concepts.hpp"
 #include "test_shared.hpp"

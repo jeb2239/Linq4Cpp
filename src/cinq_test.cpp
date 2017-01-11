@@ -9,6 +9,15 @@ int main(int argc, char **argv)
     return failed;
 }
 
+void test_performance()
+{
+    auto tests = make_tests_perf();
+    for (test_perf t : tests)
+    {
+        printf("[%4d] %dx %s\n", t.func(), t.runs, t.name.c_str());
+    }
+}
+
 int test_correctness()
 {
     auto tests = make_tests();
@@ -39,14 +48,14 @@ int test_correctness()
     return failed;
 }
 
-void test_performance()
-{
-    auto tests = make_tests_perf();
-    for (test_perf t : tests)
-    {
-        printf("[%4d] %dx %s\n", t.func(), t.runs, t.name.c_str());
-    }
-}
+// void test_performance()
+// {
+//     auto tests = make_tests_perf();
+//     for (test_perf t : tests)
+//     {
+//         printf("[%4d] %dx %s\n", t.func(), t.runs, t.name.c_str());
+//     }
+// }
 
 vector<test> make_tests()
 {
@@ -774,5 +783,5 @@ vector<test> make_tests()
                && (result == (nums[0]*nums[0] + nums[1]*nums[1] + nums[2]*nums[2] + nums[3]*nums[3] + nums[4]*nums[4] + nums[5]*nums[5]) / nums.size());
     }));
     
-    return tests;
-}
+     return tests;
+ }
